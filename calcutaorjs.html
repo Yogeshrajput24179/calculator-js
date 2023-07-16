@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript">
+	function cal(){
+		var inp = document.getElementById('inp').value;
+		var inp2 = document.getElementById('inp2').value;
+		var inp3 = document.getElementById('inp3').value;
+		if (inp3 == '+'){
+			var res = parseInt(inp)+parseInt(inp2);
+			}
+			if (inp3 == '-'){
+			var res = parseInt(inp)-parseInt(inp2);
+			}
+			if (inp3 == '*'){
+			var res = parseInt(inp) * parseInt(inp2);
+			}
+			if (inp3 == '/'){
+			var res = parseInt(inp)/parseInt(inp2);
+			}
+			
+		document.getElementById('res').value=res;
+	}
+	</script>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		
+		background-color: yellow;
+	}
+	.header{
+		background-color: limegreen;
+		height: 200px;
+		width: 500px;
+		margin-top: 200px;
+		margin-left: 440px;
+		border: 2px solid;
+		
+	}
+	.input input{
+		margin-top:10px ;
+		margin-left: 10px;
+		height: 30px;
+		width: 200px;
+		background-color: lime;
+		border:2px solid
+	}
+	.input select{
+		height: 30px;
+		width: 40px;
+		margin-left: 10px;
+		border: 2px solid;
+		
+	}
+	.btn button{
+		margin-left: 200px;
+		margin-top: 20px;
+		height: 30px;
+		width: 100px;
+		border-radius: 9%;
+		background-color: deepskyblue;
+		border: 2px solid;
+	}
+	.inpt input{
+		margin-top: 20px;
+		height: 30px;
+		width: 200px;
+		margin-left: 140px;
+		background-color: lime;
+		border: 2px solid;
+	}
+	
+	</style>
+</head>
+
+<body>
+	<div class="header" >
+		<div style="background-color: coral; ">
+			<h1 style="margin-left:140px; background-color: coral">CALCULATOR</h1>
+		</div>
+	<div class="input" style="background-color: limegreen; ">
+		<input type="number" id="inp" placeholder="  Enter no.">
+		<select id="inp3">
+		    <option value="+">+</option>
+			<option value="*">x</option>
+			<option value="/">/</option>
+			<option value="-">-</option>
+		</select>
+		<input type="number" id="inp2" placeholder="  Enter no.">
+		</div>
+		<div class="btn" style="background-color: limegreen">
+		<button onclick="cal()">calculate</button>
+
+		</div>
+		<div class="inpt" style="background-color: limegreen;">
+		<input type="number" readonly="" placeholder="  Result" id="res">
+		</div>
+	
+	</div>
+</body>
+	
+</html>
